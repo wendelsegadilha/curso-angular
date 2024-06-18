@@ -1,3 +1,10 @@
-h2 {
-    color: red;
+
+p {
+    padding: 10px;
+}
+
+.title {
+    background: #000;
+    padding: 15px;
+    color: aqua;
 }
