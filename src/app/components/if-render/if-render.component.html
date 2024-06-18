@@ -1,0 +1,4 @@
+<div *ngIf="canshow">Exibição permitida</div>
+
+<h3 *ngIf="name === 'Wendel'; else nameNotFound">O nome é {{ name }}</h3>
+<ng-template #nameNotFound> O nome não foi encontrado </ng-template>
