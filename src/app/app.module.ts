@@ -10,6 +10,7 @@ import { IfRenderComponent } from './components/if-render/if-render.component';
 import { EventosComponent } from './components/eventos/eventos.component';
 import { ComponentePaiComponent } from './components/componente-pai/componente-pai.component';
 import { ComponenteFilhoComponent } from './components/componente-filho/componente-filho.component';
+import { ListComponentComponent } from './components/list-component/list-component.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ComponenteFilhoComponent } from './components/componente-filho/componen
     IfRenderComponent,
     EventosComponent,
     ComponentePaiComponent,
-    ComponenteFilhoComponent
+    ComponenteFilhoComponent,
+    ListComponentComponent
   ],
   imports: [
     BrowserModule,
