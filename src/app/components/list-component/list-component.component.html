@@ -1,7 +1,9 @@
 <h2>Lista de animais</h2>
 <ul>
   <li *ngFor="let animal of animals">
-    {{ animal.id }} - {{ animal.name }} - {{ animal.type }} - {{ animal.age }} -
+    {{ animal.id }} -
+    <a routerLink="/list/{{ animal.id }}">{{ animal.name }}</a> -
+    {{ animal.type }} - {{ animal.age }} -
     <a style="cursor: pointer" (click)="mostarNoConsole(animal)"
       >Exibir no Console</a
     >

@@ -15,6 +15,7 @@ import { PipeOperatorComponent } from './components/pipe-operator/pipe-operator.
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     ListComponentComponent,
     PipeOperatorComponent,
     TwoWayBindingComponent,
+    ItemDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

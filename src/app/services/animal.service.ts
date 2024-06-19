@@ -15,6 +15,10 @@ export class AnimalService {
     return this.http.get<Animal[]>(this.urlApi);
   }
 
+  getItem(id: number): Observable<Animal> {
+    return this.http.get<Animal>(`${this.urlApi}/${id}`);
+  }
+
   remove(animals: Animal[], animal: Animal) {
     console.log(animal);
     animals = animals.filter((a) => animal.name !== a.name);
