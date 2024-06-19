@@ -11,6 +11,7 @@ import { EventosComponent } from './components/eventos/eventos.component';
 import { ComponentePaiComponent } from './components/componente-pai/componente-pai.component';
 import { ComponenteFilhoComponent } from './components/componente-filho/componente-filho.component';
 import { ListComponentComponent } from './components/list-component/list-component.component';
+import { PipeOperatorComponent } from './components/pipe-operator/pipe-operator.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ListComponentComponent } from './components/list-component/list-compone
     EventosComponent,
     ComponentePaiComponent,
     ComponenteFilhoComponent,
-    ListComponentComponent
+    ListComponentComponent,
+    PipeOperatorComponent
   ],
   imports: [
     BrowserModule,
