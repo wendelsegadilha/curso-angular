@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from '../../interfaces/animal';
 
+import { AnimalService } from '../../services/animal.service';
+
 @Component({
   selector: 'app-list-component',
   templateUrl: './list-component.component.html',
@@ -14,15 +16,15 @@ export class ListComponentComponent implements OnInit {
     { id: 4, name: 'Mokita', type: 'Dog', age: 2 },
   ];
 
-  animal: Animal = {
-    id: 5,
-    name: 'Luna',
-    type: 'Cat',
-    age: 2,
-  };
+  constructor(private animalService: AnimalService) {}
 
   mostarNoConsole(animal: Animal) {
     console.log(animal);
+  }
+
+  removeAnimal(animal: Animal) {
+    console.log('deu certo aqui');
+    this.animals = this.animalService.remove(this.animals, animal);
   }
 
   ngOnInit(): void {}
