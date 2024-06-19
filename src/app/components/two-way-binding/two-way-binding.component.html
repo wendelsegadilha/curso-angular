@@ -1,0 +1,11 @@
+<form>
+  <input
+    [(ngModel)]="name"
+    type="text"
+    name="name"
+    id="name"
+    placeholder="Qual o seu nome?"
+  />
+</form>
+
+<p *ngIf="name !== ''">O seu nome é {{ name }}</p>

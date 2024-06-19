@@ -12,6 +12,8 @@ import { ComponentePaiComponent } from './components/componente-pai/componente-p
 import { ComponenteFilhoComponent } from './components/componente-filho/componente-filho.component';
 import { ListComponentComponent } from './components/list-component/list-component.component';
 import { PipeOperatorComponent } from './components/pipe-operator/pipe-operator.component';
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,11 @@ import { PipeOperatorComponent } from './components/pipe-operator/pipe-operator.
     ComponentePaiComponent,
     ComponenteFilhoComponent,
     ListComponentComponent,
-    PipeOperatorComponent
+    PipeOperatorComponent,
+    TwoWayBindingComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
