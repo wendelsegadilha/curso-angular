@@ -9,12 +9,7 @@ import { AnimalService } from '../../services/animal.service';
   styleUrl: './list-component.component.css',
 })
 export class ListComponentComponent implements OnInit {
-  animals: Animal[] = [
-    { id: 1, name: 'Frida', type: 'Dog', age: 5 },
-    { id: 2, name: 'Ping', type: 'Cat', age: 1 },
-    { id: 3, name: 'Pong', type: 'Cat', age: 1 },
-    { id: 4, name: 'Mokita', type: 'Dog', age: 2 },
-  ];
+  animals: Animal[] = [];
 
   constructor(private animalService: AnimalService) {}
 
@@ -27,5 +22,13 @@ export class ListComponentComponent implements OnInit {
     this.animals = this.animalService.remove(this.animals, animal);
   }
 
-  ngOnInit(): void {}
+  getListAnimals(): void {
+    this.animalService.getListAnimals().subscribe((animals) => {
+      this.animals = animals;
+    });
+  }
+
+  ngOnInit(): void {
+    this.getListAnimals();
+  }
 }
