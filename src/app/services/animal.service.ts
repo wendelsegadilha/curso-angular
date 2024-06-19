@@ -19,10 +19,7 @@ export class AnimalService {
     return this.http.get<Animal>(`${this.urlApi}/${id}`);
   }
 
-  remove(animals: Animal[], animal: Animal) {
-    console.log(animal);
-    animals = animals.filter((a) => animal.name !== a.name);
-    console.log(animals);
-    return animals;
+  remove(id: number) {
+    return this.http.delete(`${this.urlApi}/${id}`);
   }
 }

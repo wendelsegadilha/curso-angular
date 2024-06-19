@@ -18,8 +18,8 @@ export class ListComponentComponent implements OnInit {
   }
 
   removeAnimal(animal: Animal) {
-    console.log('deu certo aqui');
-    this.animals = this.animalService.remove(this.animals, animal);
+    this.animals = this.animals.filter((a) => animal.name !== a.name);
+    this.animalService.remove(animal.id).subscribe();
   }
 
   getListAnimals(): void {
